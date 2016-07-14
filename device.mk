@@ -35,9 +35,7 @@ PRODUCT_COPY_FILES += \
 # NFC packages
 PRODUCT_PACKAGES += \
     NfcNci \
-    Tag \
-    libnfc-nci \
-    nfc_nci.pn54x.default
+    Tag
 
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/j5yltedo/overlay
