@@ -53,7 +53,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
    property_get("ro.bootloader", bootloader);
 
    if (strstr(bootloader, "J500Y")) {
-      /* SM-J500FN */
+      /* SM-J500Y */
       property_set("ro.build.fingerprint", "samsung/j5yltedo/j5ylte:5.1.1/LMY48B/J500YXXU1AOL1:user/release-keys");
       property_set("ro.build.description", "j5yltedo-user 5.1.1 LMY48B J500YXXU1AOL1 release-keys");
       property_set("ro.product.model", "SM-J500Y");
