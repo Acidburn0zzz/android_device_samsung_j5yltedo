@@ -32,19 +32,16 @@
 #include "property_service.h"
 #include "log.h"
 #include "util.h"
-#include "init_msm.h"
 
-void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
+#define ISMATCH(a,b)    (!strncmp(a,b,PROP_VALUE_MAX))
+
+void vendor_load_properties()
 {
    char platform[PROP_VALUE_MAX];
    char bootloader[PROP_VALUE_MAX];
    char device[PROP_VALUE_MAX];
    char devicename[PROP_VALUE_MAX];
    int rc;
-
-   UNUSED(msm_id);
-   UNUSED(msm_ver);
-   UNUSED(board_type);
 
    rc = property_get("ro.board.platform", platform);
    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
@@ -54,8 +51,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
    if (strstr(bootloader, "J500Y")) {
       /* SM-J500Y */
-      property_set("ro.build.fingerprint", "samsung/j5yltedo/j5ylte:5.1.1/LMY48B/J500YXXU1AOL1:user/release-keys");
-      property_set("ro.build.description", "j5yltedo-user 5.1.1 LMY48B J500YXXU1AOL1 release-keys");
+      property_set("ro.build.fingerprint", "samsung/j5yltedo/j5ylte:6.0.1/MMB29M/J500YXXU1AOL1:user/release-keys");
+      property_set("ro.build.description", "j5yltedo-user 6.0.1 MMB29M J500YXXU1AOL1 release-keys");
       property_set("ro.product.model", "SM-J500Y");
       property_set("ro.product.device", "j5ylte");
 
