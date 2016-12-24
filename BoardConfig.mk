@@ -46,10 +46,6 @@ BOARD_NFC_DEVICE := "/dev/pn547"
 # Assert
 TARGET_OTA_ASSERT_DEVICE := j5ylte
 
-# Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_j5nlte_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/j5lte
-
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_j5ylte
